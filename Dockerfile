@@ -3,7 +3,7 @@ FROM alpine:3.12
 MAINTAINER Dilshan Fernando<dilshan.fdo@gmail.com>
 
 ARG JMETER_VERSION="5.3"
-ARG JMETER_PLUGINS=""
+ARG JMETER_PLUGINS="jpgc-ffw=2.0"
 ARG TZ=UTC
 
 ENV JMETER_PLUGIN_MANAGER="1.4"
