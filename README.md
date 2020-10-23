@@ -50,4 +50,4 @@ This JMeter docker image has been tested against for 1000 Transactions Per Secon
 
 ![Screenshot](images/tps_1000.png)
 
-![Screenshot](images/proceess bytes.png)
+![Screenshot](images/proceess_bytes.png)
