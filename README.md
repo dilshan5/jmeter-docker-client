@@ -12,7 +12,7 @@ Find Images of this repo on [Docker Hub](https://hub.docker.com/r/justb4/jmeter)
 Build arguments with default values if not passed to build:
 
 - **JMETER_VERSION** - JMeter version, default ``5.3``
-- **JMETER_PLUGINS** - JMeter plugins
+- **JMETER_PLUGINS** - JMeter plugins, default ``Flexible File Writer Plugin``
 - **IMAGE_TIMEZONE** - timezone of Docker image, default ``"UTC"``
 
 ## Running
