@@ -8,7 +8,7 @@ freeMem=`awk '/MemFree/ { print int($2/1024) }' /proc/meminfo`
 s=$(($freeMem/10*8))
 x=$(($freeMem/10*8))
 n=$(($freeMem/10*2))
-export JVM_ARGS="-XX:+AggressiveOpts -XX:+UseLargePages -Xmn${n}m -Xms${s}m -Xmx${x}m"
+export JVM_ARGS="-XX:+AggressiveOpts -Xmn${n}m -Xms${s}m -Xmx${x}m"
 #export JVM_ARGS="-XX:ParallelGCThreads=8 -XX:-UseG1GC -XX:+UseConcMarkSweepGC -XX:+AggressiveOpts -XX:+UseLargePages -Xmn${n}m -Xms${s}m -Xmx${x}m"
 
 echo "JAVA_JDK_VERSION: ${JAVA_JDK_VERSION}"

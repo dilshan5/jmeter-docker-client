@@ -12,7 +12,7 @@ Find Images of this repo on [Docker Hub](https://hub.docker.com/r/justb4/jmeter)
 Build arguments with default values if not passed to build:
 
 - **JMETER_VERSION** - JMeter version, default ``5.3``
-- **JMETER_PLUGINS** - JMeter plugins, default ``Flexible File Writer Plugin``
+- **JMETER_PLUGINS** - JMeter plugins
 - **IMAGE_TIMEZONE** - timezone of Docker image, default ``"UTC"``
 
 ## Running
@@ -37,7 +37,7 @@ See https://hub.docker.com/_/alpine/ for Alpine Docker images.
 
 The Docker image will install (via Alpine ``apk``) several required packages most specifically
 the ``OpenJDK Java JDK``.  This image use ``OpenJDK 11`` as default Java version. To check the latest OpenJDK version 
-used by the ``alpine:latest``check [Alpine Linux packages](https://pkgs.alpinelinux.org/packages)
+used by the ``alpine:3.12``check [Alpine Linux packages](https://pkgs.alpinelinux.org/packages)
 
 JMeter installed by simply downloading/unpacking a ``.tgz`` archive
 from https://archive.apache.org/dist/jmeter/binaries/ within the Docker image.
