@@ -11,10 +11,11 @@ n=$(($freeMem/10*2))
 export JVM_ARGS="-XX:+AggressiveOpts -Xmn${n}m -Xms${s}m -Xmx${x}m"
 #export JVM_ARGS="-XX:ParallelGCThreads=8 -XX:-UseG1GC -XX:+UseConcMarkSweepGC -XX:+AggressiveOpts -XX:+UseLargePages -Xmn${n}m -Xms${s}m -Xmx${x}m"
 
-echo "JAVA_JDK_VERSION: ${JAVA_JDK_VERSION}"
-echo "START Running Jmeter on format : ${TZ} : `date`"
+echo "JAVA JDK Version: ${JAVA_JDK_VERSION}"
+echo "JMeter Version: ${JMETER_VERSION}"
+echo "JMeter Plugins Installed: ${JMETER_PLUGINS}"
+echo "Start Running Jmeter Docker with Time Format : ${TZ} : `date`"
 
 # Keep entrypoint simple: we must pass the standard JMeter arguments
 jmeter $@
 
-echo "END Running Jmeter on `date`"

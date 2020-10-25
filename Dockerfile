@@ -3,8 +3,7 @@ FROM alpine:3.12
 MAINTAINER Dilshan Fernando<dilshan.fdo@gmail.com>
 
 ARG JMETER_VERSION="5.3"
-#ARG JMETER_PLUGINS="jpgc-ffw=2.0"
-ARG JMETER_PLUGINS=""
+ARG JMETER_PLUGINS="jpgc-casutg=2.9,jpgc-graphs-basic=2.0,jpgc-perfmon=2.1,jpgc-dummy=0.4,jpgc-tst=2.5,jpgc-functions=2.1,jpgc-ffw=2.0,jpgc-fifo=0.2,jpgc-graphs-additional=2.0"
 ARG TZ=UTC
 
 ENV JMETER_PLUGIN_MANAGER="1.4"
@@ -29,14 +28,13 @@ RUN    apk update \
 	&& mkdir -p /opt  \
 	&& tar -xzf /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz -C /opt
 
-# Download JMeter Plugins only IF user pass any
-RUN 	if [ "$JMETER_PLUGINS" != "" ] ; then \
-       curl --silent ${JMETER_CMDRUNNER_URL} >  /tmp/dependencies/cmdrunner-2.2.jar  \
+# Download JMeter Plugins
+RUN    curl --silent ${JMETER_CMDRUNNER_URL} >  /tmp/dependencies/cmdrunner-2.2.jar  \
     && mv /tmp/dependencies/cmdrunner-2.2.jar  ${JMETER_HOME}/lib  \
 	&& curl --silent ${JMETER_PLUGIN_MANAGER_URL} >  /tmp/dependencies/jmeter-plugins-manager-${JMETER_PLUGIN_MANAGER}.jar  \
 	&& mv /tmp/dependencies/jmeter-plugins-manager-${JMETER_PLUGIN_MANAGER}.jar  /${JMETER_HOME}/lib/ext  \
 	&& java -cp ${JMETER_HOME}/lib/ext/jmeter-plugins-manager-${JMETER_PLUGIN_MANAGER}.jar org.jmeterplugins.repository.PluginManagerCMDInstaller  \
-	&& ${JMETER_BIN}/PluginsManagerCMD.sh install ${JMETER_PLUGINS} ; fi\
+	&& ${JMETER_BIN}/PluginsManagerCMD.sh install ${JMETER_PLUGINS} \
 	&& rm -rf /tmp/dependencies
 
 # Set global PATH such that "jmeter" command is found

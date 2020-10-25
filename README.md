@@ -12,8 +12,11 @@ Find Images of this repo on [Docker Hub](https://hub.docker.com/r/justb4/jmeter)
 Build arguments with default values if not passed to build:
 
 - **JMETER_VERSION** - JMeter version, default ``5.3``
-- **JMETER_PLUGINS** - JMeter plugins,
-- **IMAGE_TIMEZONE** - timezone of Docker image, default ``"UTC"``
+- **JMETER_PLUGINS** - JMeter plugins, default ``Custom Thread Groups``, ``3 Basic Graphs``, 
+``PerfMon (Servers Performance Monitoring)``, ``Dummy Sampler``, ``Throughput Shaping Timer``, ``Custom JMeter Functions``, ``Flexible File Writer``, ``Inter-Thread Communication``, ``5 Additional Graphs`` 
+- **IMAGE_TIMEZONE** - Timezone of Docker image, default ``"UTC"``
+
+[Custom Plugins for Apache JMeter](https://jmeter-plugins.org/)
 
 ## Running
 
