@@ -23,7 +23,7 @@ Build arguments with default values if not passed to build:
 The Docker image will accept the same parameters as ``jmeter`` itself, assuming
 you run JMeter non-GUI with ``-n``.
 
-See for an example of how to call [jmeter-docker-client](https://github.com/dilshan5/jmeter-docker-client-example).
+See for an example of how to use [jmeter-docker-client](https://github.com/dilshan5/jmeter-docker-client-example).
 
 ## Specifications
 
