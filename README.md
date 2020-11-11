@@ -1,11 +1,11 @@
-[![Docker Build](https://img.shields.io/docker/automated/justb4/jmeter.svg)](https://hub.docker.com/r/justb4/jmeter)
+[![Docker Build](images/jmeter.svg)](https://hub.docker.com/r/dilshan7fdo/jmeter-docker)
 
 # jmeter-docker-client
 ## Image on Docker Hub
 
 Docker image for [Apache JMeter](http://jmeter.apache.org).
 This Docker image can be run as the ``jmeter`` command. 
-Find Images of this repo on [Docker Hub](https://hub.docker.com/r/justb4/jmeter).
+Find Images of this repo on [Docker Hub](https://hub.docker.com/r/dilshan7fdo/jmeter-docker).
 
 ### Build Options
 
